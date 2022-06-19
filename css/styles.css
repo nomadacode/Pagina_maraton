@@ -298,3 +298,54 @@ li { /*Ordeno la lista en línea*/
 .footer-p2{
     font-weight: bold;
 }
+
+.tituloSubtituloPrincipal {
+    margin: 3rem;
+}
+.formulario {
+    background-color: var(--gris-claro);
+    border-radius: 3rem;
+    width: 100rem;
+    height: 95rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.formulario h3 {
+    text-align: center;
+    padding: 2rem;
+}
+.formulario fieldset {
+    border: none;
+}
+
+.formularioContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    
+}
+
+.formularioContenido label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    display: block;
+    padding: 2rem 0rem;
+
+}
+
+.formularioContenido input {
+    color: var(--gris);
+    border: none;
+    height: 3rem;
+    width: 80rem;
+}
+.formulario textarea {
+    width: 80rem;
+    height: 30rem;
+    border: none;
+    border-radius: .5rem;
+}
+.botonFormulario {
+    margin: 2rem;
+}

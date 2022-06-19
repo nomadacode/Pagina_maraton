@@ -1,0 +1,300 @@
+:root { /*seteo los colores principales de la página*/
+    --blanco: #ffffff;
+    --oscuro: #000000;
+    --primario: #84D600;
+    --secundario: #0097a7;
+    --gris: #BDBDBD;
+    --gris-claro: #F6F6F6;
+    --gris-oscuro:#232323;
+    --parrafo: #9B9B9B;
+}
+  
+html { /*Declaro reglas generales para todo el HTML*/
+    font-size: 62.5%; /* Para hacer que 1rem = 10px*/
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Reglas para todos los h y parrafos*/
+h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 4.5rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+p {
+    font-size: 1.8rem;
+    color: var(--parrafo);
+}
+
+/*Estilos de los botones de la pagina*/
+.boton { /*Características del botón reutilizables*/
+    border: 2px solid var(--primario);
+    background-color: var(--blanco);
+    width: 25rem;
+    height: 5rem;
+    border-radius: 10rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+}
+
+.boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+/*Estilos del header*/
+.header__background { /*Estilo general*/
+    background-color: var(--gris-oscuro);
+    padding: 1rem;
+}
+
+.header__orden { /*Todos los elementos del header van a ocupar un espacio específico*/
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.header__logo { /*Alineo el Logo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__links { /*Alineo los links*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul { /*Quito bullet a la lista*/
+    list-style: none;
+}
+
+li { /*Ordeno la lista en línea*/
+    display: inline-block;
+}
+
+.header__menu a { /*Detalles de estilo del texto del menú*/
+    color: var(--blanco);
+    text-decoration: none; /*Quito el "subrayado" de link*/
+    font-size: 2rem;
+    font-weight: 400; 
+    padding: 1rem;
+}
+
+.header__menu a:hover { /*Le doy un efecto hover al texto del menú*/
+    color: var(--primario);
+}
+
+.header__boton { /*Ubico al botón del Login*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__boton--login { /*Le doy estilo al botón de Login*/
+    background-color: var(--primario);
+    border: 1px solid var(--primario);
+    color: var(--blanco);
+    width: 15rem;
+    height: 5rem;
+    border-radius: 10rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2rem;
+    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+}
+
+.header__boton :hover { /*efecto hover del texto*/
+    color: var(--oscuro);
+}
+
+/*Contenido del main*/
+/*Primera seccion de la pagina*/
+
+.principal { /*División del primer contenido*/
+    display: grid;
+    grid-template-columns:repeat(2, 50%); /*2 columnas de 50% c/u*/
+    height: 80rem; /*achico el contenedor*/
+}
+
+.Principal__imagen { /*Alineación de la imagen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal__espacioBlanco { /*Espacio blanco sobre el título H1*/
+    margin-top: 14rem;
+}
+
+.principal__contenido { /*Alineación de los textos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonCTA { /*Separación del texto principal */
+    margin-top: 3rem;
+}
+
+.principal__sponsors { /*Alineación del texto e imágenes*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.principal__sponsors--sponsor { /*Separación de los logos de los sponsors*/
+    margin: 0 3rem;
+}
+
+/*Estilos de la Seccion de numeros sobre el evento*/
+.evento { /*Creo 4 columnas dentro de esta seccion*/
+    display: grid;
+    grid-template-columns:repeat(4, 25%);
+}
+.eventoBackground { /*Le asigno color y altura al fondo*/
+    background-color: var(--gris-claro); 
+    height: 25rem;
+}
+/*Alineo los elementos hijo*/
+.evento__elemento__1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.evento__elemento__2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.evento__elemento__3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.evento__elemento__4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Estilos de la seccion multimedia*/
+.orden__texto {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 3rem;
+}
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subtitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ubicacion-video {
+    max-width: 107rem;
+    margin: 0 auto;
+    background:var(--oscuro);
+    -moz-border-radius: 20px; /* Busque info en internet para darle radio al video*/
+    overflow:hidden; /*hago que los vertices del video no se vean*/
+    border-radius: 20px;
+}
+
+.background-1 {
+    background-color: var(--gris-claro);
+}
+
+
+.contenedor-carrusel {
+    background-color: var(--gris-claro);
+    max-width: 107rem;
+    margin:auto;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.card {
+    background-color: var(--blanco);
+    width: 35rem;
+    border-radius: 25px;
+    margin: 5rem;
+    padding: 3rem;
+}
+
+.card__imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__titulo {
+    text-align: justify;
+}
+.card__contenido {
+    text-align: justify;
+}
+
+.boton-carrusel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-bg {
+    background-color: var(--gris-oscuro);
+    margin-top: 10rem;
+}
+
+.footerContenedor {
+   display: grid;
+   grid-template-columns: 50% 50%; 
+   padding: 3rem;
+}
+.logoCopy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 3rem;
+}
+.logosRedes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.logoRedes{
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+.iconosRedes {
+    margin: 0 1rem;  
+}
+
+.footer-p1, .footer-p2 {
+    color: var(--blanco);
+}
+.footer-p2{
+    font-weight: bold;
+}

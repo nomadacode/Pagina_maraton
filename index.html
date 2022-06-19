@@ -5,167 +5,229 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maratón Solidaria | Apex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-    <header>
-        <div>
-            <a href="/index.html"><img src="/img/apex_logo_1.png" alt="Logo Apex"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./paginas/proyectos.html">Proyectos solidarios</a></li>
-                <li><a href="./paginas/testimonios.html">Testimonios</a></li>
-                <li><a href="./paginas/entradas.html">Consigue tu entrada</a></li>
-                <li><a href="./paginas/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <div>
-            <button>Login</button>
-        </div>
+    <!--Lista del menu del header-->
+    <header class="header__background">
+        <div class="header__orden">
+            <section class="header__logo">
+                <a href="/index.html"><img src="/img/apex_logo_1.png" alt="Logo Apex"></a>
+            </section>
+            <section class="header__links">
+                <nav>
+                    <ul class="header__menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./paginas/proyectos.html">Proyectos solidarios</a></li>
+                        <li><a href="./paginas/testimonios.html">Testimonios</a></li>
+                        <li><a href="./paginas/entradas.html">Consigue tu entrada</a></li>
+                        <li><a href="./paginas/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>    
+            </section>
+            <section class="header__boton">
+                <div>
+                    <button class="header__boton--login">Login</button>
+                </div>
+            </section>     
+        </div> 
     </header>
     <main>
-        <section>
-            <div>
+        <!--Contenido principal. Imagen y Primer call to action-->
+        <div class="principal">
+            <section class="Principal__imagen">
                 <img src="/img/girl_r.png" alt="Girl Runer">
-            </div>
-            <div>
-                <h1>MARATON APEX 2022</h1>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                       Cras egestas tincidunt libero nec posuere. <br>
-                       Nunc commodo nibh non consequat lobortis. </p>
-                <div>
-                    <button>Consigue tu entrada</button>
-                </div> 
-            </div>
-            <div>
-                <h2>Nos acompañan</h2>
-                <div>
-                    <img src="/img/sponsor_mp.png" alt="Logo Mercado Pago">
-                    <img src="/img/sponsor_bitso.png" alt="Logo Bitso">
-                    <img src="/img/sponsor_claro.png" alt="Logo Claro">
+            </section>
+            <section class="principal__espacioBlanco">
+                <div class="principal__contenido">
+                    <h1>Maraton Apex 2022</h1>
+                    <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                           Cras egestas tincidunt libero nec posuere. <br>
+                           Nunc commodo nibh non consequat lobortis. </p>
+                    <div>
+                        <a href="/paginas/entradas.html"><button class="boton botonCTA">Consigue tu entrada</button></a>
+                    </div> 
                 </div>
+                <div class="principal__sponsors">
+                    <h2>Nos acompañan</h2>
+                    <div>
+                        <img src="/img/sponsor_mp.png" alt="Logo Mercado Pago" class="principal__sponsors--sponsor">
+                        <img src="/img/sponsor_bitso.png" alt="Logo Bitso" class="principal__sponsors--sponsor">
+                        <img src="/img/sponsor_claro.png" alt="Logo Claro" class="principal__sponsors--sponsor">
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!--Numeros sobre el evento-->
+        <div class="evento eventoBackground">
+            <div class="evento__elemento__1">
+                <h2>5</h2>
+                <h3>Países</h3>
+            </div>
+            <div class="evento__elemento__2">
+                <h2>45</h2>
+                <h3>Proyectos solidarios</h3>
+            </div>
+            <div class="evento__elemento__3">
+                <h2>10000+</h2>
+                <h3>Runners</h3>
+            </div>
+            <div class="evento__elemento__4">
+                <H2>7000+</H2>
+                <h3>Colaboradores</h3>
+            </div>
+        </div>
+
+        <!--Contenido multimedia-->
+        <section>
+            <div class="orden__texto">
+                <div class="titulo">
+                    <h2>Título del video</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                        Cras egestas tincidunt libero nec posuere. <br>
+                        Nunc commodo nibh non consequat lobortis. </p>
+                </div>
+            </div>
+            <div class="ubicacion-video">
+                <iframe width="1070" height="500" src="https://www.youtube.com/embed/49jEhAXOmpA" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
-        <Section>
-            <div>
-                <h2>5</h2>
-                <p>Países</p>
-            </div>
-            <div>
-                <h2>45</h2>
-                <p>Proyectos solidarios</p>
-            </div>
-            <div>
-                <h2>10000+</h2>
-                <p>Runners</p>
-            </div>
-            <div>
-                <H2>7000+</H2>
-                <p>Colaboradores</p>
-            </div>
-        </Section>
-        <Section></Section>
-            <div>
-                <h2>Título del video</h2>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                    Cras egestas tincidunt libero nec posuere. <br>
-                    Nunc commodo nibh non consequat lobortis. </p>
-            </div>
-            <div>
-                <iframe width="1069" height="484" src="https://www.youtube.com/embed/49jEhAXOmpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </Section>
-        <section></section>
-            <div>
-                <h2>Conoce los proyectos <br> 
-                    solidarios y únete a la <br>
-                    carrera para apoyarlos</h2>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                   Cras egestas tincidunt libero nec posuere. <br>
-                   Nunc commodo nibh non consequat lobortis. </p>
-            </div>
-            <div>
-                <img src="/img/hand.png" alt="">
-                <h3>Abuelos Felices</h3>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                   Cras egestas tincidunt libero nec posuere. <br>
-                   Nunc commodo nibh non consequat lobortis. </p>
-                <div>
-                    <button>Ver el Proyecto completo</button>
+        
+
+        <!--Seccion de Proyectos y Carrusel-->
+        <section>
+            <div class="orden__texto">
+                <div class="titulo">
+                    <h2>Conoce los proyectos <br> 
+                        solidarios y únete a la <br>
+                        carrera para apoyarlos</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                        Cras egestas tincidunt libero nec posuere. <br>
+                        Nunc commodo nibh non consequat lobortis. </p>
                 </div>
             </div>
-            <div>
-                <img src="/img/hand.png" alt="">
-                <h3>Salud 100%</h3>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                   Cras egestas tincidunt libero nec posuere. <br>
-                   Nunc commodo nibh non consequat lobortis. </p>
-                <div>
-                    <button>Ver el Proyecto completo</button>
+
+            <div class="contenedor-carrusel">
+                <div class="card">
+                    <div class="card__imagen">
+                        <img src="/img/hand.png" alt="">
+                    </div>
+                    <h3 class="card__titulo">Abuelos Felices</h3>
+                    <p class="card__contenido">Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                    Cras egestas tincidunt libero nec posuere. <br>
+                    Nunc commodo nibh non consequat lobortis. </p>
+                    <div class="boton-carrusel">
+                        <button class="boton">Ver el Proyecto completo</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__imagen">
+                        <img src="/img/hand.png" alt="">
+                    </div>
+                    <h3 class="card__titulo">Salud 100%</h3>
+                    <p class="card__contenido">Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                    Cras egestas tincidunt libero nec posuere. <br>
+                    Nunc commodo nibh non consequat lobortis. </p>
+                    <div class="boton-carrusel">
+                        <button class="boton">Ver el Proyecto completo</button>
+                    </div>
+                </div>
+                
+            </div>
+        </Section>
+
+        <!--Seccion de Testimonios y Carrusel-->
+        <Section>
+
+            <div class="orden__texto">
+                <div class="titulo">
+                    <h2>Testimonios de los <br> 
+                        beneficiarios de años <br>
+                        anteriores</h2>
+                </div>
+                <div class="subtitulo">
+                    <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                        Cras egestas tincidunt libero nec posuere. <br>
+                        Nunc commodo nibh non consequat lobortis. </p>
+                </div>
+            </div>
+
+            <div class="contenedor-carrusel">
+                <div class="card">
+                    <div class="card__imagen">
+                        <img src="/img/hand.png" alt="">
+                    </div>
+                    <h3 class="card__titulo">Abraham Simpson</h3>
+                    <p class="card__contenido">Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                    Cras egestas tincidunt libero nec posuere. <br>
+                    Nunc commodo nibh non consequat lobortis. </p>
+                    <div class="boton-carrusel">
+                        <button class="boton">Ver el Proyecto completo</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__imagen">
+                        <img src="/img/hand.png" alt="">
+                    </div>
+                    <h3 class="card__titulo">Marge Simpson</h3>
+                    <p class="card__contenido">Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
+                    Cras egestas tincidunt libero nec posuere. <br>
+                    Nunc commodo nibh non consequat lobortis. </p>
+                    <div class="boton-carrusel">
+                        <button class="boton">Ver el Proyecto completo</button>
+                    </div>
                 </div>
             </div>
         </Section>
 
-        <Section>
-            <div>
-                <h2>Testimonios de los <br> 
-                    beneficiarios de años <br>
-                    anteriores</h2>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                Cras egestas tincidunt libero nec posuere. <br>
-                Nunc commodo nibh non consequat lobortis. </p>
-            </div>
-            <div>
-                <img src="/img/hand.png" alt="">
-                <h3>Abraham Simpson</h3>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                   Cras egestas tincidunt libero nec posuere. <br>
-                   Nunc commodo nibh non consequat lobortis. </p>
-                <div>
-                    <button>Ver el testimonio completo</button>
+        <!--Seccion de ultimo Call to action-->
+        <Section class="background-1">
+            <div class="orden__texto">
+                <div class="titulo">
+                    <h2>Con la compra de tu <br> 
+                        entrada, colaboras <br>
+                        haciendo realidad <br>
+                        el sueño de muchas <br>
+                        personas</h2>
                 </div>
-            </div>
-            <div>
-                <img src="/img/hand.png" alt="">
-                <h3>Marge Simpson</h3>
-                <p>Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
-                   Cras egestas tincidunt libero nec posuere. <br>
-                   Nunc commodo nibh non consequat lobortis. </p>
-                <div>
-                    <button>Ver el testimonio completo</button>
+                <div class="subtitulo">
+                    <button class="boton">Quiero colaborar</button>
                 </div>
-            </div>
-        </Section>
-        <Section>
-            <div>
-                <h2>Con la compra de tu <br> 
-                    entrada, colaboras <br>
-                    haciendo realidad <br>
-                    el sueño de muchas <br>
-                    personas</h2>
-            </div>
-            <div>
-                <button>Quiero colaborar</button>
             </div>
         </Section>
     </main>
-    <footer>
-        <div>
-            <div>
+
+    <footer class="footer-bg">
+    <!--Logo, Copywright y enlaces a RRSS-->
+        <div class="footerContenedor">
+            <div class="logoCopy">
                 <a href="https://apexamerica.com/"><img src="/img/apex_logo_2.png" alt="Logo Apex"></a>
-                <p>© 2022 Copyright Apex América - <br>
-                   Derechos reservados</p>
+                <p class="footer-p1">© 2022 Copyright Apex América - <br>
+                    Derechos reservados</p>
             </div>
-            <div>
-                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram"></a>
-                <a href="#"><img src="/img/logo_facebook.png" alt="Logo Facebook"></a>
-                <a href="#"><img src="/img/logo_twitter.png" alt="Logo Twitter"></a>
-                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram"></a>
-                <a href="#"><img src="/img/Logo_youtube.png" alt="Logo Youtube"></a>
-                <p>Síguenos en nuestras redes</p>
+        <div class="logosRedes">
+            <div class="logoRedes">
+                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram" class="iconosRedes"></a>
+                <a href="#"><img src="/img/logo_facebook.png" alt="Logo Facebook" class="iconosRedes"></a>
+                <a href="#"><img src="/img/logo_twitter.png" alt="Logo Twitter" class="iconosRedes"></a>
+                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram" class="iconosRedes"></a>
+                <a href="#"><img src="/img/Logo_youtube.png" alt="Logo Youtube" class="iconosRedes"></a>
             </div>
+            <div class="ctaLogosRedes">
+                <p class="footer-p2">Síguenos en nuestras redes</p>
+            </div>
+
         </div>
+    
     </footer>
 </body>
 </html>

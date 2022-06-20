@@ -5,46 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <div>
-            <a href="/index.html"><img src="/img/apex_logo_1.png" alt="Logo Apex"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../paginas/proyectos.html">Proyectos solidarios</a></li>
-                <li><a href="../paginas/testimonios.html">Testimonios</a></li>
-                <li><a href="../paginas/entradas.html">Consigue tu entrada</a></li>
-                <li><a href="../paginas/contacto.html">Contacto</a></li>
-    </ul>
-        </nav>
-        <div>
-            <button>Login</button>
-        </div>
+    <!--Lista del menu del header-->
+    <header class="header__background">
+        <div class="header__orden">
+            <section class="header__logo">
+                <a href="/index.html"><img src="/img/apex_logo_1.png" alt="Logo Apex"></a>
+            </section>
+            <section class="header__links">
+                <nav>
+                    <ul class="header__menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../paginas/proyectos.html">Proyectos solidarios</a></li>
+                        <li><a href="../paginas/testimonios.html">Testimonios</a></li>
+                        <li><a href="../paginas/entradas.html">Consigue tu entrada</a></li>
+                        <li><a href="../paginas/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>    
+            </section>
+            <section class="header__boton">
+                <div>
+                    <button class="header__boton--login">Login</button>
+                </div>
+            </section>     
+        </div> 
     </header>
+    <!--Contenido principal-->
     <main>
-        <h1>Testimonios</h1>
+
     </main>
- 
-    <footer>
-        <div>
-            <div>
-                <img src="/img/apex_logo_2.png" alt="Logo Apex">
-                <p>© 2022 Copyright Apex América - <br>
-                   Derechos reservados</p>
+    
+    <!--Logo, Copywright y enlaces a RRSS-->
+    <footer class="footer-bg">
+        <div class="footerContenedor">
+            <div class="logoCopy">
+                <a href="https://apexamerica.com/"><img src="/img/apex_logo_2.png" alt="Logo Apex"></a>
+                <p class="footer-p1">© 2022 Copyright Apex América - <br>
+                    Derechos reservados</p>
             </div>
-            <div>
-                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram"></a>
-                <a href="#"><img src="/img/logo_facebook.png" alt="Logo Facebook"></a>
-                <a href="#"><img src="/img/logo_twitter.png" alt="Logo Twitter"></a>
-                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram"></a>
-                <a href="#"><img src="/img/Logo_youtube.png" alt="Logo Youtube"></a>
-                <p>Síguenos en nuestras redes</p>
+        <div class="logosRedes">
+            <div class="logoRedes">
+                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram" class="iconosRedes"></a>
+                <a href="#"><img src="/img/logo_facebook.png" alt="Logo Facebook" class="iconosRedes"></a>
+                <a href="#"><img src="/img/logo_twitter.png" alt="Logo Twitter" class="iconosRedes"></a>
+                <a href="#"><img src="/img/logo_instagram.png" alt="Logo Instagram" class="iconosRedes"></a>
+                <a href="#"><img src="/img/Logo_youtube.png" alt="Logo Youtube" class="iconosRedes"></a>
+            </div>
+            <div class="ctaLogosRedes">
+                <p class="footer-p2">Síguenos en nuestras redes</p>
             </div>
         </div>
     </footer>
-    </main>
 </body>
 </html>

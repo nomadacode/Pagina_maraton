@@ -47,39 +47,51 @@ p {
     color: var(--blanco);
 }
 
+/*Estilos de las secciones de la pagina*/
+.orden__texto { /*Coloco titulo y subtitulo yuxtapuestos*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 3rem;
+}
+.titulo { /*Centro el titulo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subtitulo { /*Centro el subtitulo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /*Estilos del header*/
-.header__background { /*Estilo general*/
+.header__background { /*Estilo general del contenedor*/
     background-color: var(--gris-oscuro);
     padding: 1rem;
 }
-
 .header__orden { /*Todos los elementos del header van a ocupar un espacio específico*/
     display: grid;
     grid-template-columns: 20% 60% 20%;
 }
-
 .header__logo { /*Alineo el Logo*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .header__links { /*Alineo los links*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 ul { /*Quito bullet a la lista*/
     list-style: none;
 }
-
 li { /*Ordeno la lista en línea*/
     display: inline-block;
 }
-
 .header__menu a { /*Detalles de estilo del texto del menú*/
     color: var(--blanco);
     text-decoration: none; /*Quito el "subrayado" de link*/
@@ -87,18 +99,15 @@ li { /*Ordeno la lista en línea*/
     font-weight: 400; 
     padding: 1rem;
 }
-
 .header__menu a:hover { /*Le doy un efecto hover al texto del menú*/
     color: var(--primario);
 }
-
 .header__boton { /*Ubico al botón del Login*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .header__boton--login { /*Le doy estilo al botón de Login*/
     background-color: var(--primario);
     border: 1px solid var(--primario);
@@ -112,7 +121,6 @@ li { /*Ordeno la lista en línea*/
     font-size: 2rem;
     cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
 }
-
 .header__boton :hover { /*efecto hover del texto*/
     color: var(--oscuro);
 }
@@ -125,27 +133,22 @@ li { /*Ordeno la lista en línea*/
     grid-template-columns:repeat(2, 50%); /*2 columnas de 50% c/u*/
     height: 80rem; /*achico el contenedor*/
 }
-
 .Principal__imagen { /*Alineación de la imagen*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .principal__espacioBlanco { /*Espacio blanco sobre el título H1*/
     margin-top: 14rem;
 }
-
 .principal__contenido { /*Alineación de los textos*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .botonCTA { /*Separación del texto principal */
     margin-top: 3rem;
 }
-
 .principal__sponsors { /*Alineación del texto e imágenes*/
     display: flex;
     flex-direction: column;
@@ -187,37 +190,17 @@ li { /*Ordeno la lista en línea*/
 }
 
 /*Estilos de la seccion multimedia*/
-.orden__texto {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 3rem;
-}
-.titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.subtitulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
+/*Asigno propiedades al iframe del video*/
 .ubicacion-video {
     max-width: 107rem;
     margin: 0 auto;
     background:var(--oscuro);
-    -moz-border-radius: 20px; /* Busque info en internet para darle radio al video*/
+    -moz-border-radius: 20px; /*para darle radio al video*/
     overflow:hidden; /*hago que los vertices del video no se vean*/
     border-radius: 20px;
 }
 
-.background-1 {
-    background-color: var(--gris-claro);
-}
-
-
+/*Estilo de los dos carruseles de la pagina*/
 .contenedor-carrusel {
     background-color: var(--gris-claro);
     max-width: 107rem;
@@ -225,26 +208,24 @@ li { /*Ordeno la lista en línea*/
     border-radius: 20px;
     padding: 1rem;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row nowrap;/*coloco dos cajas en fila. Podria usar grid??*/ 
     justify-content: flex-start;
     align-items: center;
 
 }
-
-.card {
+/*Estilo de las cards dentro de los carruseles la pagina*/
+.card { /*Estilo de la card*/
     background-color: var(--blanco);
     width: 35rem;
     border-radius: 25px;
     margin: 5rem;
     padding: 3rem;
 }
-
 .card__imagen {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .card__titulo {
     text-align: justify;
 }
@@ -252,43 +233,46 @@ li { /*Ordeno la lista en línea*/
     text-align: justify;
 }
 
-.boton-carrusel {
+.boton-carrusel { /*Ubicacion del boton en relacion a la card*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*Estilo del ultimo call to action de la pagina*/
+.background-1 {
+    background-color: var(--gris-claro);
+}
 
+/*Estilo general del footer*/
 .footer-bg {
     background-color: var(--gris-oscuro);
     margin-top: 10rem;
 }
-
-.footerContenedor {
+.footerContenedor { /*divido el contenedor en dos*/
    display: grid;
    grid-template-columns: 50% 50%; 
    padding: 3rem;
 }
-.logoCopy {
+.logoCopy { /*Alineo el logo al comienzo*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 3rem;
 }
-.logosRedes {
+.logosRedes { /*Centro los logos*/
     display: flex;
     flex-direction: column;
     align-items: center; 
 }
 
-.logoRedes{
+.logoRedes{ /*Cada logo de las RRSS va en fila, separados*/
     display: block;
     flex-direction: row;
     align-items: center;
     margin: 0 3rem;
 }
-
-.iconosRedes {
+.iconosRedes { /*aire entre los iconos y el texto*/
     margin: 0 1rem;  
 }
 
@@ -299,10 +283,12 @@ li { /*Ordeno la lista en línea*/
     font-weight: bold;
 }
 
-.tituloSubtituloPrincipal {
+/*Estilos del formulario de contacto*/
+
+.tituloSubtituloPrincipal { /*separo el titulo y subtitulo del margen*/
     margin: 3rem;
 }
-.formulario {
+.formulario { /*Estilos del contenedor del form*/
     background-color: var(--gris-claro);
     border-radius: 3rem;
     width: 100rem;
@@ -314,17 +300,18 @@ li { /*Ordeno la lista en línea*/
     text-align: center;
     padding: 2rem;
 }
-.formulario fieldset {
+.formulario fieldset { /*Quito borde al fieldset*/
     border: none;
 }
 
-.formularioContenido {
+.formularioContenido {/*Centro el contenido*/
     display: flex;
     flex-direction: column;
     align-items: center; 
     
 }
 
+/*Estilos de los labels,imput y text area del formulario*/
 .formularioContenido label {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -333,19 +320,21 @@ li { /*Ordeno la lista en línea*/
     padding: 2rem 0rem;
 
 }
-
 .formularioContenido input {
     color: var(--gris);
     border: none;
     height: 3rem;
     width: 80rem;
 }
-.formulario textarea {
+.formularioContenido textarea {
     width: 80rem;
     height: 30rem;
     border: none;
     border-radius: .5rem;
 }
 .botonFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
     margin: 2rem;
 }

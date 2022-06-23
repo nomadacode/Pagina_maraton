@@ -131,12 +131,13 @@ li { /*Ordeno la lista en línea*/
 .principal { /*División del primer contenido*/
     display: grid;
     grid-template-columns:repeat(2, 50%); /*2 columnas de 50% c/u*/
-    height: 80rem; /*achico el contenedor*/
+    height: 70rem; /*achico el contenedor*/
 }
 .Principal__imagen { /*Alineación de la imagen*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .principal__espacioBlanco { /*Espacio blanco sobre el título H1*/
     margin-top: 14rem;
@@ -337,4 +338,23 @@ li { /*Ordeno la lista en línea*/
     flex-direction: column;
     align-items: flex-end; 
     margin: 2rem;
+}
+
+/*Estilos de la página de proyectos*/
+
+.contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(4, 25%); 
+}
+
+.contenedor-bg {
+    background-color: var(--gris-claro); 
+}
+
+
+/*Alineo los elementos hijo*/
+.card_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

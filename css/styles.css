@@ -8,7 +8,14 @@
     --gris-oscuro:#232323;
     --parrafo: #9B9B9B;
 }
-  
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 html { /*Declaro reglas generales para todo el HTML*/
     font-size: 62.5%; /* Para hacer que 1rem = 10px*/
     font-family: 'Poppins', sans-serif;
@@ -128,16 +135,26 @@ li { /*Ordeno la lista en línea*/
 /*Contenido del main*/
 /*Primera seccion de la pagina*/
 
-.principal { /*División del primer contenido*/
+.contenido_principal { /*División del primer contenido*/
     display: grid;
     grid-template-columns:repeat(2, 50%); /*2 columnas de 50% c/u*/
     height: 70rem; /*achico el contenedor*/
 }
-.Principal__imagen { /*Alineación de la imagen*/
+.contenedor__imagen { /*Alineación de la imagen*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.formato__imagen { /* Defino que el contenedor tenga este tamaño*/
+    height: 640px;
+    width: 480px; 
+}
+.formato__imagen img { /* Defino que las imágenes se adapten al contenedor padre*/
+    object-fit: cover;
+    width:100%;
+    height:100%; 
+    border-radius: 1rem; /*Le doy un pequeño radio a la imagen*/ 
 }
 .principal__espacioBlanco { /*Espacio blanco sobre el título H1*/
     margin-top: 14rem;
@@ -167,6 +184,7 @@ li { /*Ordeno la lista en línea*/
 .eventoBackground { /*Le asigno color y altura al fondo*/
     background-color: var(--gris-claro); 
     height: 25rem;
+    margin-top: 8rem;
 }
 /*Alineo los elementos hijo*/
 .evento__elemento__1 {

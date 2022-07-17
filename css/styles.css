@@ -14,6 +14,8 @@ html {
   }
   *, *:before, *:after {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
   }
 
 html { /*Declaro reglas generales para todo el HTML*/
@@ -36,6 +38,20 @@ p {
     font-size: 1.8rem;
     color: var(--parrafo);
 }
+
+@media (max-width: 60rem){
+    h1 {
+        font-size: 3rem;
+        text-transform: uppercase; 
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2.0rem;
+    }
+}
+
 
 /*Estilos de los botones de la pagina*/
 .boton { /*Características del botón reutilizables*/
@@ -60,6 +76,16 @@ p {
     grid-template-columns: 50% 50%;
     margin: 3rem;
 }
+
+@media (max-width: 50rem){
+    .orden__texto {
+        display: grid;
+        grid-template-columns:100%;
+        margin: 3rem;
+        justify-content: center;
+    }
+}
+
 .titulo { /*Centro el titulo*/
     display: flex;
     flex-direction: column;
@@ -77,6 +103,7 @@ p {
     background-color: var(--gris-oscuro);
     padding: 1rem;
 }
+
 .header__orden { /*Todos los elementos del header van a ocupar un espacio específico*/
     display: grid;
     grid-template-columns: 20% 60% 20%;
@@ -93,6 +120,22 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 55rem) {
+    
+    .header__orden {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    .header__links nav {
+        display: none;
+    }
+    .header__boton button {
+        display: none;
+    }
+}
+
 ul { /*Quito bullet a la lista*/
     list-style: none;
 }
@@ -138,7 +181,7 @@ li { /*Ordeno la lista en línea*/
 .contenido_principal { /*División del primer contenido*/
     display: grid;
     grid-template-columns:repeat(2, 50%); /*2 columnas de 50% c/u*/
-    height: 70rem; /*achico el contenedor*/
+    
 }
 .contenedor__imagen { /*Alineación de la imagen*/
     display: flex;
@@ -176,6 +219,29 @@ li { /*Ordeno la lista en línea*/
     margin: 0 3rem;
 }
 
+
+@media (max-width: 80rem){
+    .contenido_principal {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+        
+    }
+
+    .principal__imagen img {
+        object-fit: cover;
+        width:100%;
+        height:100%; 
+    }
+
+    .principal__espacioBlanco {
+        margin-top: 0rem;
+    }
+}
+
+
+
+
 /*Estilos de la Seccion de numeros sobre el evento*/
 .evento { /*Creo 4 columnas dentro de esta seccion*/
     display: grid;
@@ -183,7 +249,7 @@ li { /*Ordeno la lista en línea*/
 }
 .eventoBackground { /*Le asigno color y altura al fondo*/
     background-color: var(--gris-claro); 
-    height: 25rem;
+
     margin-top: 8rem;
 }
 /*Alineo los elementos hijo*/
@@ -208,6 +274,17 @@ li { /*Ordeno la lista en línea*/
     align-items: center;
 }
 
+
+@media (max-width: 50rem){
+    .evento {
+        display: grid;
+        grid-template-columns:repeat(2, 50%);
+        justify-content: center;
+    }
+    
+}
+
+
 /*Estilos de la seccion multimedia*/
 /*Asigno propiedades al iframe del video*/
 .ubicacion-video {
@@ -219,6 +296,12 @@ li { /*Ordeno la lista en línea*/
     border-radius: 20px;
 }
 
+@media (max-width: 80rem){
+    .ubicacion-video iframe {
+        width: 100%;
+    }
+    
+}
 /*Estilo de los dos carruseles de la pagina*/
 .contenedor-carrusel {
     background-color: var(--gris-claro);
@@ -227,11 +310,19 @@ li { /*Ordeno la lista en línea*/
     border-radius: 20px;
     padding: 1rem;
     display: flex;
-    flex-flow: row nowrap;/*coloco dos cajas en fila. Podria usar grid??*/ 
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: center;
 
 }
+
+@media (max-width: 50rem){
+    .contenedor-carrusel {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /*Estilo de las cards dentro de los carruseles la pagina*/
 .card { /*Estilo de la card*/
     background-color: var(--blanco);
@@ -361,9 +452,18 @@ li { /*Ordeno la lista en línea*/
 /*Estilos de la página de proyectos*/
 
 .contenedor-proyectos {
-    display: grid;
-    grid-template-columns: repeat(4, 25%); 
+    display: flex;
+    flex-wrap: wrap; 
 }
+@media (max-width: 50rem){
+    .contenedor-proyectos {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
 
 .contenedor-bg {
     background-color: var(--gris-claro); 

@@ -39,19 +39,6 @@ p {
     color: var(--parrafo);
 }
 
-@media (max-width: 60rem){
-    h1 {
-        font-size: 3rem;
-        text-transform: uppercase; 
-    }
-    h2 {
-        font-size: 2.5rem;
-    }
-    h3 {
-        font-size: 2.0rem;
-    }
-}
-
 
 /*Estilos de los botones de la pagina*/
 .boton { /*Características del botón reutilizables*/
@@ -77,14 +64,6 @@ p {
     margin: 3rem;
 }
 
-@media (max-width: 50rem){
-    .orden__texto {
-        display: grid;
-        grid-template-columns:100%;
-        margin: 3rem;
-        justify-content: center;
-    }
-}
 
 .titulo { /*Centro el titulo*/
     display: flex;
@@ -121,20 +100,7 @@ p {
     justify-content: center;
 }
 
-@media (max-width: 55rem) {
-    
-    .header__orden {
-        display: grid;
-        grid-template-columns: 100%;
-        justify-content: center;
-    }
-    .header__links nav {
-        display: none;
-    }
-    .header__boton button {
-        display: none;
-    }
-}
+
 
 ul { /*Quito bullet a la lista*/
     list-style: none;
@@ -220,25 +186,6 @@ li { /*Ordeno la lista en línea*/
 }
 
 
-@media (max-width: 80rem){
-    .contenido_principal {
-        display: grid;
-        grid-template-columns: 100%;
-        justify-content: center;
-        
-    }
-
-    .principal__imagen img {
-        object-fit: cover;
-        width:100%;
-        height:100%; 
-    }
-
-    .principal__espacioBlanco {
-        margin-top: 0rem;
-    }
-}
-
 
 
 
@@ -275,15 +222,6 @@ li { /*Ordeno la lista en línea*/
 }
 
 
-@media (max-width: 50rem){
-    .evento {
-        display: grid;
-        grid-template-columns:repeat(2, 50%);
-        justify-content: center;
-    }
-    
-}
-
 
 /*Estilos de la seccion multimedia*/
 /*Asigno propiedades al iframe del video*/
@@ -296,12 +234,7 @@ li { /*Ordeno la lista en línea*/
     border-radius: 20px;
 }
 
-@media (max-width: 80rem){
-    .ubicacion-video iframe {
-        width: 100%;
-    }
-    
-}
+
 /*Estilo de los dos carruseles de la pagina*/
 .contenedor-carrusel {
     background-color: var(--gris-claro);
@@ -313,14 +246,6 @@ li { /*Ordeno la lista en línea*/
     flex-wrap: wrap; 
     justify-content: center;
 
-}
-
-@media (max-width: 50rem){
-    .contenedor-carrusel {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 /*Estilo de las cards dentro de los carruseles la pagina*/
@@ -454,14 +379,6 @@ li { /*Ordeno la lista en línea*/
 .contenedor-proyectos {
     display: flex;
     flex-wrap: wrap; 
-}
-@media (max-width: 50rem){
-    .contenedor-proyectos {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
 }
 
 

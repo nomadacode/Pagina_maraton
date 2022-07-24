@@ -54,14 +54,14 @@
     font-family: 'Poppins', Helvetica, Arial;
 }
 .boton { /*Características del botón reutilizables*/
-        border: 2px solid var(--primario);
-        background-color: var(--blanco);
-        width: 15rem;
-        height: 3rem;
-        border-radius: 10rem;
-        font-family: 'Poppins', sans-serif;
-        font-weight: bold;
-        cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+    border: 2px solid var(--primario);
+    background-color: var(--blanco);
+    width: 15rem;
+    height: 3rem;
+    border-radius: 10rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
 }
 .botonCTA { /*Separación del texto principal */
     margin-top: 1rem;

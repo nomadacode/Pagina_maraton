@@ -1,0 +1,48 @@
+
+.footer-bg {
+    background-color: $grisOscuro;
+    margin-top: 10rem;
+.footerContenedor {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+        padding: 3rem;
+        .logoCopy { 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 3rem;
+            p {
+                color: $blanco;
+                font-family: $fuentePrincipal;
+                font-size: 1.5rem;
+            }
+        }
+        .logosRedes {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            .logoRedes{ 
+                display: block;
+                flex-direction: row;
+                align-items: center;
+                margin: 0 3rem;
+                .iconosRedes { 
+                    margin: 0 1rem;  
+                }
+            } 
+            .ctaLogosRedes {
+                p {
+                    margin-top: 1rem;
+                    color: $blanco;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }  
+            }    
+        }     
+    }     
+}
+
+
+
+
+

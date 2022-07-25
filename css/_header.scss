@@ -1,0 +1,46 @@
+.header__background {
+    background-color:$grisOscuro;
+    padding: 1rem;
+}
+    
+.header__orden { 
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.header__logo { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header__links { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__boton { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    li {
+        display: inline-block;
+        a {
+            text-decoration: none;
+            color: $blanco;
+            font-size: 2rem;
+            font-weight: 400; 
+            padding: 1rem;
+        }
+    }
+} 
+
+.header__links a:hover {
+    color: $colorPrimario;
+}

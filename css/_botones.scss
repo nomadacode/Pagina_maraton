@@ -1,0 +1,35 @@
+.header__boton--login { /*Le doy estilo al botón de Login*/
+    background-color: $colorPrimario;
+    border: 1px solid $colorPrimario;
+    border-radius: 10rem;
+    width: 15rem;
+    height: 5rem;
+    font-family: $fuentePrincipal;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $blanco;
+    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+}
+
+.header__boton :hover { /*efecto hover del texto*/
+    color: $negro;
+}
+
+
+.boton { /*Características del botón reutilizables*/
+    border: 2px solid $colorPrimario;
+    background-color: $blanco;
+    width: 25rem;
+    height: 5rem;
+    border-radius: 10rem;
+    font-family: $fuentePrincipal;
+    font-weight: bold;
+    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+}
+
+.boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
+    background-color: $colorPrimario;
+    color: $blanco;
+}
+

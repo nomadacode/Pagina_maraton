@@ -1,395 +1,253 @@
-:root { /*seteo los colores principales de la página*/
-    --blanco: #ffffff;
-    --oscuro: #000000;
-    --primario: #84D600;
-    --secundario: #0097a7;
-    --gris: #BDBDBD;
-    --gris-claro: #F6F6F6;
-    --gris-oscuro:#232323;
-    --parrafo: #9B9B9B;
-}
-
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-    padding: 0;
-    margin: 0;
-  }
-
+@charset "UTF-8";
 html { /*Declaro reglas generales para todo el HTML*/
-    font-size: 62.5%; /* Para hacer que 1rem = 10px*/
-    font-family: 'Poppins', sans-serif;
+  font-size: 62.5%; /* Para hacer que 1rem = 10px*/
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-/*Reglas para todos los h y parrafos*/
-h1{
-    font-size: 5rem;
-    text-transform: uppercase;
-}
-h2 {
-    font-size: 4.5rem;
-}
-h3 {
-    font-size: 2.5rem;
-}
-p {
-    font-size: 1.8rem;
-    color: var(--parrafo);
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
+@media (max-width: 750px) {
+  .header__orden {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+  .header__links nav {
+    display: none;
+  }
+  .header__boton button {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 20rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+}
+.header__background {
+  background-color: #232323;
+  padding: 1rem;
+}
 
-/*Estilos de los botones de la pagina*/
+.header__orden {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.header__links a:hover {
+  color: #84D600;
+}
+
+.contenedorInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+}
+.contenedorInfo h2 {
+  font-size: 2.5rem;
+}
+.contenedorInfo p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.formulario {
+  background-color: #F6F6F6;
+  width: min(60rem, 100%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.formulario fieldset {
+  border: none;
+}
+.formulario legend {
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.campo:nth-child(3),
+.campo:nth-child(4) {
+  grid-column: 1/3;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+.campo label {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block;
+}
+.campo textarea {
+  height: 18rem;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.boton {
+  margin-top: 2rem;
+}
+
+.header__boton--login { /*Le doy estilo al botón de Login*/
+  background-color: #84D600;
+  border: 1px solid #84D600;
+  border-radius: 10rem;
+  width: 15rem;
+  height: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+}
+
+.header__boton :hover { /*efecto hover del texto*/
+  color: #000000;
+}
+
 .boton { /*Características del botón reutilizables*/
-    border: 2px solid var(--primario);
-    background-color: var(--blanco);
-    width: 25rem;
-    height: 5rem;
-    border-radius: 10rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+  border: 2px solid #84D600;
+  background-color: #ffffff;
+  width: 25rem;
+  height: 5rem;
+  border-radius: 10rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
 }
 
 .boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
-    background-color: var(--primario);
-    color: var(--blanco);
+  background-color: #84D600;
+  color: #ffffff;
 }
 
-/*Estilos de las secciones de la pagina*/
-.orden__texto { /*Coloco titulo y subtitulo yuxtapuestos*/
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 3rem;
-}
-
-
-.titulo { /*Centro el titulo*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.subtitulo { /*Centro el subtitulo*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/*Estilos del header*/
-.header__background { /*Estilo general del contenedor*/
-    background-color: var(--gris-oscuro);
-    padding: 1rem;
-}
-
-.header__orden { /*Todos los elementos del header van a ocupar un espacio específico*/
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-}
-.header__logo { /*Alineo el Logo*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.header__links { /*Alineo los links*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-ul { /*Quito bullet a la lista*/
-    list-style: none;
-}
-li { /*Ordeno la lista en línea*/
-    display: inline-block;
-}
-.header__menu a { /*Detalles de estilo del texto del menú*/
-    color: var(--blanco);
-    text-decoration: none; /*Quito el "subrayado" de link*/
-    font-size: 2rem;
-    font-weight: 400; 
-    padding: 1rem;
-}
-.header__menu a:hover { /*Le doy un efecto hover al texto del menú*/
-    color: var(--primario);
-}
-.header__boton { /*Ubico al botón del Login*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .header__boton--login { /*Le doy estilo al botón de Login*/
-    background-color: var(--primario);
-    border: 1px solid var(--primario);
-    color: var(--blanco);
-    width: 15rem;
-    height: 5rem;
-    border-radius: 10rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2rem;
-    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+  background-color: #84D600;
+  border: 1px solid #84D600;
+  border-radius: 10rem;
+  width: 15rem;
+  height: 5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
 }
+
 .header__boton :hover { /*efecto hover del texto*/
-    color: var(--oscuro);
+  color: #000000;
 }
 
-/*Contenido del main*/
-/*Primera seccion de la pagina*/
-
-.contenido_principal { /*División del primer contenido*/
-    display: grid;
-    grid-template-columns:repeat(2, 50%); /*2 columnas de 50% c/u*/
-    
-}
-.contenedor__imagen { /*Alineación de la imagen*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.formato__imagen { /* Defino que el contenedor tenga este tamaño*/
-    height: 640px;
-    width: 480px; 
-}
-.formato__imagen img { /* Defino que las imágenes se adapten al contenedor padre*/
-    object-fit: cover;
-    width:100%;
-    height:100%; 
-    border-radius: 1rem; /*Le doy un pequeño radio a la imagen*/ 
-}
-.principal__espacioBlanco { /*Espacio blanco sobre el título H1*/
-    margin-top: 14rem;
-}
-.principal__contenido { /*Alineación de los textos*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.botonCTA { /*Separación del texto principal */
-    margin-top: 3rem;
-}
-.principal__sponsors { /*Alineación del texto e imágenes*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.principal__sponsors--sponsor { /*Separación de los logos de los sponsors*/
-    margin: 0 3rem;
+.boton { /*Características del botón reutilizables*/
+  border: 2px solid #84D600;
+  background-color: #ffffff;
+  width: 25rem;
+  height: 5rem;
+  border-radius: 10rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
 }
 
-
-
-
-
-/*Estilos de la Seccion de numeros sobre el evento*/
-.evento { /*Creo 4 columnas dentro de esta seccion*/
-    display: grid;
-    grid-template-columns:repeat(4, 25%);
-}
-.eventoBackground { /*Le asigno color y altura al fondo*/
-    background-color: var(--gris-claro); 
-
-    margin-top: 8rem;
-}
-/*Alineo los elementos hijo*/
-.evento__elemento__1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.evento__elemento__2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.evento__elemento__3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.evento__elemento__4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
+  background-color: #84D600;
+  color: #ffffff;
 }
 
-
-
-/*Estilos de la seccion multimedia*/
-/*Asigno propiedades al iframe del video*/
-.ubicacion-video {
-    max-width: 107rem;
-    margin: 0 auto;
-    background:var(--oscuro);
-    -moz-border-radius: 20px; /*para darle radio al video*/
-    overflow:hidden; /*hago que los vertices del video no se vean*/
-    border-radius: 20px;
-}
-
-
-/*Estilo de los dos carruseles de la pagina*/
-.contenedor-carrusel {
-    background-color: var(--gris-claro);
-    max-width: 107rem;
-    margin:auto;
-    border-radius: 20px;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-
-}
-
-/*Estilo de las cards dentro de los carruseles la pagina*/
-.card { /*Estilo de la card*/
-    background-color: var(--blanco);
-    width: 35rem;
-    border-radius: 25px;
-    margin: 5rem;
-    padding: 3rem;
-}
-.card__imagen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.card__titulo {
-    text-align: justify;
-}
-.card__contenido {
-    text-align: justify;
-}
-
-.boton-carrusel { /*Ubicacion del boton en relacion a la card*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*Estilo del ultimo call to action de la pagina*/
-.background-1 {
-    background-color: var(--gris-claro);
-}
-
-/*Estilo general del footer*/
 .footer-bg {
-    background-color: var(--gris-oscuro);
-    margin-top: 10rem;
+  background-color: #232323;
+  margin-top: 10rem;
 }
-.footerContenedor { /*divido el contenedor en dos*/
-   display: grid;
-   grid-template-columns: 50% 50%; 
-   padding: 3rem;
+.footer-bg .footerContenedor {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 3rem;
 }
-.logoCopy { /*Alineo el logo al comienzo*/
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 3rem;
+.footer-bg .footerContenedor .logoCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 3rem;
 }
-.logosRedes { /*Centro los logos*/
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.footer-bg .footerContenedor .logoCopy p {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
 }
-
-.logoRedes{ /*Cada logo de las RRSS va en fila, separados*/
-    display: block;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 3rem;
+.footer-bg .footerContenedor .logosRedes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.iconosRedes { /*aire entre los iconos y el texto*/
-    margin: 0 1rem;  
+.footer-bg .footerContenedor .logosRedes .logoRedes {
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 3rem;
 }
-
-.footer-p1, .footer-p2 {
-    color: var(--blanco);
+.footer-bg .footerContenedor .logosRedes .logoRedes .iconosRedes {
+  margin: 0 1rem;
 }
-.footer-p2{
-    font-weight: bold;
-}
-
-/*Estilos del formulario de contacto*/
-
-.tituloSubtituloPrincipal { /*separo el titulo y subtitulo del margen*/
-    margin: 3rem;
-}
-.formulario { /*Estilos del contenedor del form*/
-    background-color: var(--gris-claro);
-    border-radius: 3rem;
-    width: 100rem;
-    height: 95rem;
-    margin: 0 auto;
-    padding: 2rem;
-}
-.formulario h3 {
-    text-align: center;
-    padding: 2rem;
-}
-.formulario fieldset { /*Quito borde al fieldset*/
-    border: none;
-}
-
-.formularioContenido {/*Centro el contenido*/
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    
-}
-
-/*Estilos de los labels,imput y text area del formulario*/
-.formularioContenido label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 2.5rem;
-    display: block;
-    padding: 2rem 0rem;
-
-}
-.formularioContenido input {
-    color: var(--gris);
-    border: none;
-    height: 3rem;
-    width: 80rem;
-}
-.formularioContenido textarea {
-    width: 80rem;
-    height: 30rem;
-    border: none;
-    border-radius: .5rem;
-}
-.botonFormulario {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; 
-    margin: 2rem;
-}
-
-/*Estilos de la página de proyectos*/
-
-.contenedor-proyectos {
-    display: flex;
-    flex-wrap: wrap; 
-}
-
-
-.contenedor-bg {
-    background-color: var(--gris-claro); 
-}
-
-
-/*Alineo los elementos hijo*/
-.card_1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+.footer-bg .footerContenedor .logosRedes .ctaLogosRedes p {
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,8 @@
+@import "colores";
+@import "fuentes";
+
+
+
 .header__background {
     background-color:$grisOscuro;
     padding: 1rem;
@@ -32,11 +37,12 @@ ul {
     li {
         display: inline-block;
         a {
-            text-decoration: none;
+            text-decoration: none !important;
             color: $blanco;
             font-size: 2rem;
             font-weight: 400; 
             padding: 1rem;
+            font-family: $fuentePrincipal;
         }
     }
 } 

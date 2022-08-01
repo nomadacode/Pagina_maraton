@@ -1,4 +1,7 @@
+/*Importo los estilos*/
 @import "botones";
+@import "fuentes";
+@import "colores";
 
 .formulario {
     background-color: $grisClaro;
@@ -44,7 +47,4 @@ padding: 1.5rem;
 border-radius: 0.5rem;
 }
 
-.boton {
-    margin-top: 2rem;
-}
 

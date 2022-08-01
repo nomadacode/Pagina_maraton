@@ -1,18 +1,91 @@
-.header__boton--login { /*Le doy estilo al botón de Login*/
-    background-color: $colorPrimario;
-    border: 1px solid $colorPrimario;
+/*Importo los estilos*/
+@import "fuentes";
+@import "colores";
+
+/*Declaro el mapa para que los botones sean de dos tipos*/
+$botones:(
+    primario: (
+        $colorPrimario, 
+        1px solid $colorPrimario,
+        15rem,
+        uppercase,
+        2rem,
+        $blanco,
+        /*hover*/
+        $negro,
+        none,
+    ),
+    secundario: (
+        $blanco,
+        2px solid $colorPrimario,
+        25rem,
+        none,
+        1.5rem,
+        $negro,
+        /*hover*/
+        $blanco,
+        $colorPrimario,
+
+    )
+);
+
+/*Tenemos características compartidas para los botones*/
+.boton {
     border-radius: 10rem;
     width: 15rem;
     height: 5rem;
     font-family: $fuentePrincipal;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+/* Creamos los botones con las características */
+
+@each $tipoBoton, $propiedades in $botones {
+    .boton--#{$tipoBoton}{ /*tipoBoton (primario o secundario)*/
+        $bgcolor: nth($propiedades,1); /*creo variables e indico con nth dónde están*/
+        $border: nth($propiedades,2);
+        $width: nth($propiedades,3);
+        $text: nth($propiedades,4);
+        $font-size: nth($propiedades,5);
+        $font-color: nth($propiedades,6);
+        
+        background-color: $bgcolor; 
+        border: $border;
+        width: $width;
+        text-transform: $text;
+        font-size: $font-size;
+        color: $font-color;
+    }
+}
+
+@each $tipoBoton, $propiedades in $botones {
+    .boton--#{$tipoBoton}:hover {
+        $hover-color: nth($propiedades,7);
+        $hover-bg: nth($propiedades,8);
+        
+        color: $hover-color;
+        background-color: $hover-bg;
+    }
+}
+
+
+/*Utilizo Extend*/
+
+.boton--submit {
+    @extend .boton--secundario;
+    margin-top: 2rem;
+}
+.boton--cta {
+    @extend .boton--secundario;
+    background-color: $colorPrimario;
     color: $blanco;
-    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
+    margin-top: 4rem;
 }
 
-.header__boton :hover { /*efecto hover del texto*/
-    color: $negro;
-}
 
+.boton--cta:hover {
+    color: #000000;
+    background-color: none;
+}

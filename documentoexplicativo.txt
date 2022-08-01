@@ -1,0 +1,11 @@
+Para la actividad de SEO:
+    - Agregué en todas las páginas etiquetas meta que explican de qué se trata cada sección
+    - Agregué en todas las páginas etiquetas meta con keywords
+    - Agregué etiquetas alt a las imagenes que tiene todo el documento
+    - Solo utilicé un h1 en todo el documento, en el título "Maraton Apex 2022" en el index
+
+Para la actividad de Sass:
+    - Solo trabajé Sass en las secciones de "Contacto" y "Proyectos"
+    - en la hoja de botones.scss incluí mapa y extend
+    - en la hoja de fuentes.scss incluí mapa y map-get
+    - en la hoja de styles.scss incluí mixin en una mediaquery

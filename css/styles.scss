@@ -1,5 +1,9 @@
 @import "colores";
-$fuentePrincipal: 'Poppins', sans-serif;
+@import "header";
+@import "formulario";
+@import "botones";
+@import "footer";
+@import "fuentes";
 
 html { /*Declaro reglas generales para todo el HTML*/
     font-size: 62.5%; /* Para hacer que 1rem = 10px*/
@@ -11,6 +15,22 @@ html { /*Declaro reglas generales para todo el HTML*/
   padding: 0;
   margin: 0;
 }
+
+.contenedorInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+
+    h2 {
+        font-size: 2.5rem;
+    }
+    p {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        
+    }
+}
+
 
 @media (max-width: 750px) {
     
@@ -36,33 +56,16 @@ html { /*Declaro reglas generales para todo el HTML*/
     }
 }
 
-@import "header";
-
-
-.contenedorInfo {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
-
-    h2 {
-        font-size: 2.5rem;
-    }
-    p {
-        margin-top: 1rem;
-        font-size: 1.4rem;
-        
-    }
+.botonPrimario {
+    border: 2px solid $colorPrimario;
+    background-color: $colorPrimario;
+    width: 25rem;
+    height: 5rem;
+    border-radius: 10rem;
+   
+    font-weight: bold;
+    cursor: pointer;
 }
-
-@import "formulario";
-@import "botones";
-@import "footer";
-
-
-
-
-
-
 
 
 

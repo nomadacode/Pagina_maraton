@@ -16,20 +16,3 @@
     color: $negro;
 }
 
-
-.boton { /*Características del botón reutilizables*/
-    border: 2px solid $colorPrimario;
-    background-color: $blanco;
-    width: 25rem;
-    height: 5rem;
-    border-radius: 10rem;
-    font-family: $fuentePrincipal;
-    font-weight: bold;
-    cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
-}
-
-.boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
-    background-color: $colorPrimario;
-    color: $blanco;
-}
-

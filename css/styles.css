@@ -1,3 +1,4 @@
+/*# sourceMappingURL=styles.css.map */
 @charset "UTF-8";
 html { /*Declaro reglas generales para todo el HTML*/
   font-size: 62.5%; /* Para hacer que 1rem = 10px*/
@@ -139,10 +140,6 @@ ul li a {
   border-radius: 0.5rem;
 }
 
-.boton {
-  margin-top: 2rem;
-}
-
 .header__boton--login { /*Le doy estilo al botón de Login*/
   background-color: #84D600;
   border: 1px solid #84D600;
@@ -161,55 +158,6 @@ ul li a {
   color: #000000;
 }
 
-.boton { /*Características del botón reutilizables*/
-  border: 2px solid #84D600;
-  background-color: #ffffff;
-  width: 25rem;
-  height: 5rem;
-  border-radius: 10rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
-}
-
-.boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
-  background-color: #84D600;
-  color: #ffffff;
-}
-
-.header__boton--login { /*Le doy estilo al botón de Login*/
-  background-color: #84D600;
-  border: 1px solid #84D600;
-  border-radius: 10rem;
-  width: 15rem;
-  height: 5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: #ffffff;
-  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
-}
-
-.header__boton :hover { /*efecto hover del texto*/
-  color: #000000;
-}
-
-.boton { /*Características del botón reutilizables*/
-  border: 2px solid #84D600;
-  background-color: #ffffff;
-  width: 25rem;
-  height: 5rem;
-  border-radius: 10rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  cursor: pointer; /*cuando se pose el puntero del mouse, muestre "la manito"*/
-}
-
-.boton:hover { /*Efecto Hover del botón reutilizable, cambia el fondo */
-  background-color: #84D600;
-  color: #ffffff;
-}
 
 .footer-bg {
   background-color: #232323;
@@ -250,4 +198,4 @@ ul li a {
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
-}/*# sourceMappingURL=styles.css.map */
+}

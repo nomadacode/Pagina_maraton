@@ -73,17 +73,37 @@ $botones:(
 
 /*Utilizo Extend*/
 
-.boton--submit {
-    @extend .boton--secundario;
-    margin-top: 2rem;
+.boton--login {
+    @extend .boton--primario;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 10rem;
+    margin-right: 1rem;
 }
+
 .boton--cta {
     @extend .boton--secundario;
     background-color: $colorPrimario;
     color: $blanco;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
 }
 
+.boton--cards {
+    @extend .boton--secundario;
+    width: 15rem;
+    height: 4rem;
+    border-radius: 10rem;
+    margin-right: 1rem;
+
+}
+
+.boton--submit {
+    @extend .boton--secundario;
+    margin-top: 2rem;
+}
+
+
+/*Fin Extend*/
 
 .boton--cta:hover {
     color: #000000;

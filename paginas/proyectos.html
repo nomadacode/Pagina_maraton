@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
         <!--Hoja de estilos vinculada a Sass-->
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../styles/styles.css">
         
         <!--Bootstrap core CSS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -31,32 +31,43 @@
     </head>
     
     <body>
-            <!--Barra de navegación-->
 
-        <header class="header__background">
-            <div class="header__orden">
-                <section class="header__logo">
-                    <a href="../index.html"><img src="../img/apex_logo_1.png" alt="Logo Apex"></a>
-                </section>
-                <section class="header__links">
-                    <nav>
-                        <ul>
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="../paginas/proyectos.html">Proyectos solidarios</a></li>
-                            <li><a href="../paginas/testimonios.html">Testimonios</a></li>
-                            <li><a href="../paginas/entradas.html">Consigue tu entrada</a></li>
-                            <li><a href="../paginas/contacto.html">Contacto</a></li>
-                        </ul>
-                    </nav>    
-                </section>
-                <section class="header__boton">
-                    <div>
-                        <button class="boton--primario boton">Login</button>
-                    </div>
-                </section>     
-            </div> 
-        </header>
-
+        <!--Barra de navegación-->
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!--Logo-->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/apex_logo_1.png" width="250" height="81" alt="Logo Apex">
+        </a>
+        <!--nav Toggler-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Lista de secciones de la página-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/proyectos.html">Proyectos solidarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/testimonios.html">Testimonios</a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/entradas.html">Entradas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../paginas/contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <!--Botón de Login-->
+            <div>
+                <button class="boton boton--login">Login</button>
+            </div>       
+        </div>
+    </nav>
         <!--Main-->   
         <main>
             <!--Seccion de Proyectos-->
@@ -64,7 +75,7 @@
                 <div class="row">
                   <div class="col-lg-7"> 
                         <div class="contenedorInfo">
-                            <h2>Proyectos</h2>
+                            <h2>Proyectos solidarios</h2>
                             <p> Donec quis rhoncus sapien, ultrices scelerisque mi. <br> 
                                 Cras egestas tincidunt libero nec posuere. <br>
                                 Nunc commodo nibh non consequat lobortis. </p>
@@ -73,114 +84,101 @@
             </div>
         
             <!--Seccion de las cards-->
-            <div class="row row-cols-1 row-cols-md-3 cards-testimonios" data-aos="fade-right">
+            <div class="row row-cols-1 row-cols-md-3" data-aos="fade-right">
                 <div class="col mb-4">
                   <div class="card text-center">
                     <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto1">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <a href="#"><button class="boton boton--secundario">Seguir leyendo</button></a>
+                    <div class="card-body cards">
+                      <h3>Card title</h3>
+                      <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="#"><button class="boton boton--cards">Seguir leyendo</button></a>
                     </div>
                   </div>
-                </div>
+                </div> 
                 <div class="col mb-4">
                     <div class="card text-center">
-                        <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto2">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <a href="#"><button class="boton boton--secundario">Seguir leyendo</button></a>
+                      <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto2">
+                      <div class="card-body cards">
+                        <h3>Card title</h3>
+                        <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#"><button class="boton boton--cards">Seguir leyendo</button></a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col mb-4">
+                  <div class="col mb-4">
                     <div class="card text-center">
-                        <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto3">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#"><button class="boton boton--secundario">Seguir leyendo</button></a>
+                      <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto3">
+                      <div class="card-body cards">
+                        <h3>Card title</h3>
+                        <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#"><button class="boton boton--cards">Seguir leyendo</button></a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col mb-4">
+                  <div class="col mb-4">
                     <div class="card text-center">
-                        <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto4">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <a href="#"><button class="boton boton--secundario">Seguir leyendo</button></a>
+                      <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto4">
+                      <div class="card-body cards">
+                        <h3>Card title</h3>
+                        <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#"><button class="boton boton--cards">Seguir leyendo</button></a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col mb-4">
+                  <div class="col mb-4">
                     <div class="card text-center">
-                        <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto5">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#"><button class="boton boton--secundario">Seguir leyendo</button></a>
+                      <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto5">
+                      <div class="card-body cards">
+                        <h3>Card title</h3>
+                        <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#"><button class="boton boton--cards">Seguir leyendo</button></a>
+                      </div>
                     </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
+                  </div>
+                  <div class="col mb-4">
                     <div class="card text-center">
-                        <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto6">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#"><button class="boton boton--secundario">Seguir leyendo</button></a>
-                        </div>
+                      <img src="../img/hands.jpg" class="card-img-top" alt="Proyecto6">
+                      <div class="card-body cards">
+                        <h3>Card title</h3>
+                        <p>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#"><button class="boton boton--cards">Seguir leyendo</button></a>
+                      </div>
                     </div>
-                </div>   
-            </div>
-            <!--Seccion de ultimo Call to action-->
-            <div class="container" data-aos="fade-right">
-                <div class="row">
-                  <div class="col-lg-7"> 
-                        <div class="contenedorInfo">
-                            <h2>Con la compra de tu entrada, colaboras 
-                                haciendo realidad el sueño de muchas personas
-                            </h2>
-                        </div> 
-                  </div>
-                  <div class="col-lg-5" data-aos="flip-left">
-                    <div class="subtitulo-seccion">
-                        <div class="d-flex justify-content-center">
-                            <a href="../paginas/entradas.html"><button class="boton boton--cta">Consigue tu entrada</button></a>
-                        </div>
-                    </div>
-                  </div>
-                </div>
+                  </div>      
             </div>
         
         </main>
     
         <!--Footer-->
 
-        <footer class="footer-bg">
-            <!--Logo, Copywright y enlaces a RRSS-->
-                <div class="footerContenedor">
-                    <div class="logoCopy">
-                        <a href="https://apexamerica.com/"><img src="../img/apex_logo_2.png" alt="Logo Apex"></a>
-                        <p>© 2022 Copyright Apex América - <br>
-                            Derechos reservados</p>
+        <footer>
+            <div class="footer-bg">
+                <div class="row footerContenedor">
+                    <div class="col-lg-6 d-flexr"> 
+                            <div>
+                                <a href="https://apexamerica.com/"><img src="../img/apex_logo_2.png" alt="Logo Apex"></a>
+                                <h4 class="footerText">© 2022 Copyright Apex América - <br>
+                                    Derechos reservados</h4>
+                            </div> 
                     </div>
-                    <div class="logosRedes">
-                        <div class="logoRedes">
-                            <a href="#"><img src="../img/logo_facebook.png" alt="Logo Facebook" class="iconosRedes"></a>
-                            <a href="#"><img src="../img/logo_twitter.png" alt="Logo Twitter" class="iconosRedes"></a>
-                            <a href="#"><img src="../img/logo_instagram.png" alt="Logo Instagram" class="iconosRedes"></a>
-                            <a href="#"><img src="../img/logo_youtube.png" alt="Logo Youtube" class="iconosRedes"></a>
-                        </div>
-                        <div class="ctaLogosRedes">
-                            <p>Síguenos en nuestras redes</p>
+                    <div class="col-lg-6 logosRedes">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <h4 class="footerText">Síguenos en nuestras redes</h4>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="#"><img src="../img/logo_facebook.png" alt="Logo Facebook" class="iconosRedes"></a>
+                                <a href="#"><img src="../img/logo_twitter.png" alt="Logo Twitter" class="iconosRedes"></a>
+                                <a href="#"><img src="../img/logo_instagram.png" alt="Logo Instagram" class="iconosRedes"></a>
+                                <a href="#"><img src="../img/logo_youtube.png" alt="Logo Youtube" class="iconosRedes"></a>
+                            </div>
+    
                         </div>
                     </div>
-                </div>           
-            </footer>
-        
+                </div>
+            </div>   
+        </footer>
+                    
         
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

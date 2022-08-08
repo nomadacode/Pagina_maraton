@@ -1,0 +1,23 @@
+@import "colores";
+@import "fuentes";
+
+$estiloGeneralCards: (
+    margenCards: 1rem,
+    
+);
+
+
+
+.cards {
+
+    margin-top: map-get($estiloGeneralCards, margenCards);
+    font-family: map-get($estiloGeneralFuente, familiaFuente);
+    h3 {
+        font-size: map-get($estiloGeneralFuente, h3-font-size);
+        font-weight: map-get($estiloGeneralFuente, h3-font-weight);
+    }
+    p {
+        padding: map-get($estiloGeneralFuente,p-padding);
+        font-size: map-get($estiloGeneralFuente,p1-font-size);
+    }
+}

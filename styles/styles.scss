@@ -4,6 +4,8 @@
 @import "botones";
 @import "formulario";
 @import "footer";
+@import "cards";
+@import "testimonio";
 
 
 html { /*Declaro reglas generales para todo el HTML*/
@@ -50,17 +52,49 @@ html { /*Declaro reglas generales para todo el HTML*/
     }
 }
 
+/*Voy poniendo acá estilos rescatados, después los mejoro*/
 
+.imagen-principal {
+    padding: 5rem;
+}
+.imagen-principal img {
+    object-fit: cover;
+    width:100%;
+    height:100%; 
+}
+.margenPrincipal {
+    margin-top: 15rem;
+}
 
+.imagenes-sponsors {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.background-dataEvento {
+    background-color: $grisClaro;
+    margin-top: 2rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
 
+}
 
+.video-multimedia {
+    margin-top: 2rem;
+} 
 
+.contenedorTestimonio {
+    margin: 2rem 0rem;
+    background-color: $grisClaro;
+}
 
-
-
-
-
+.espaciado {
+    margin: 2rem;
+}
 
 
 
